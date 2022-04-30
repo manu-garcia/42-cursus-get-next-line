@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manu <manu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: manugarc <manugarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 20:41:14 by manu              #+#    #+#             */
-/*   Updated: 2022/04/23 19:31:15 by manu             ###   ########.fr       */
+/*   Updated: 2022/04/30 16:18:46 by manugarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,12 @@ char	*get_next_line(int fd)
 	files_content[fd] = read_until_new_line(fd, files_content[fd]);
 	if (!files_content[fd])
 		return (NULL);
+	if (!ft_strlen(files_content[fd]))
+	{
+		free(files_content[fd]);
+		files_content[fd] = NULL;
+		return (NULL);
+	}
 	aux = ft_strchr(files_content[fd], '\n');
 	if (aux)
 		return (get_up_to_new_line(&files_content[fd], aux));
