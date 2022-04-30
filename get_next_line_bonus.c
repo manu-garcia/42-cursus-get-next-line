@@ -6,14 +6,14 @@
 /*   By: manugarc <manugarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 13:26:54 by manugarc          #+#    #+#             */
-/*   Updated: 2022/04/30 13:27:17 by manugarc         ###   ########.fr       */
+/*   Updated: 2022/04/30 16:27:36 by manugarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strlen(const char *str);
